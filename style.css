@@ -259,22 +259,6 @@ body{
 }
 
 
-/* dashed rain background */
-
-#rain-bg{
-    position: absolute;
-    inset: 0;
-
-    background-image: repeating-linear-gradient(
-        -60deg,
-        rgba(124, 107, 255, 0.25) 0px,
-        rgba(124, 107, 255, 0.25) 2px,
-        transparent 2px,
-        transparent 28px
-    );
-
-    pointer-events: none;
-}
 
 /* dark mode css */
 
@@ -346,3 +330,24 @@ body.dark-mode p,
 body.dark-mode span{
     color:#F5F5F5;
 }
+
+
+body,
+.container,
+.details,
+.temp-circle,
+.upicon,
+.hour-card,
+.divider{
+    transition:0.35s ease;
+}
+
+
+.details:hover{
+    transform:translateY(-3px);
+}
+
+.upicon{
+    cursor:pointer;
+}
+
