@@ -61,6 +61,8 @@ body{
     position:relative;
     left:8px;
     top:8px;
+
+    cursor:pointer;
 }
 
 
@@ -345,9 +347,5 @@ body,
 
 .details:hover{
     transform:translateY(-3px);
-}
-
-.upicon{
-    cursor:pointer;
 }
 
