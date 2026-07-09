@@ -35,6 +35,10 @@ body{
     gap:85px;
 }
 
+/* search city feature */
+
+.searchBox i.
+
 /* icons styling */
 
 .upicon svg{
@@ -42,7 +46,30 @@ body{
     height:24px;
     color:#ff6a00;
 }
+.search-box{
+    width:24px;
+    height:24px;
+    color:#ff6a00;
+     width:28px;
+    height:28px;
 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#EEF3FB;
+    border-radius:12px;
+
+    box-shadow:
+    6px 6px 12px #c9d4e8,
+    -6px -6px 12px #ffffff;
+
+    position:relative;
+    left:8px;
+    top:8px;
+
+    cursor:pointer;
+}
 .upicon{
     width:28px;
     height:28px;
@@ -349,3 +376,12 @@ body,
     transform:translateY(-3px);
 }
 
+body.dark-mode #search-box{
+
+    background:#2A2D3E;
+
+    box-shadow:
+    5px 5px 10px rgba(0,0,0,.45),
+    -5px -5px 10px rgba(255,255,255,.04);
+
+}

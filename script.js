@@ -32,3 +32,11 @@ toggleBtn.addEventListener("click", () => {
 
     lucide.createIcons();
 });
+
+
+
+let search = document.querySelector("#search-box")
+
+search.addEventListener("click", function () {
+    search.classList.toggle("active");
+})

@@ -15,18 +15,19 @@
       <div class="navbar">
 
       <!-- menu icon -->
-    <div class="upicon">
-      <i data-lucide="menu"></i>
+    <div id="search-box" class="search-box">
+      <i data-lucide="search"></i>
+      <i data-lucide="search"></i>
     </div>
 
       <!-- city info -->
        <div class="location">
-          <h3>India, Pune</h3>
-          <p>Sat, June 24 2026</p>
+          <h3 id="city-name">India, Pune</h3>
+          <p id="current-date">Sat, June 24 2026</p>
        </div>
 
     <div class="upicon theme-toggle">
-      <i data-lucide="moon" id="themeIcon">🌙</i>
+      <i data-lucide="moon" id="themeIcon"></i>
     </div>
 
        </div>
@@ -37,16 +38,17 @@
         <!-- body circle -->
 
 
-        <div class="weather-box">
+        <div id="weather-icon" class="weather-box">
 
             <i data-lucide="cloud-rain" class="weather-icon" ></i>
                 <div class="temp-circle">
             
-                  <h1 class="temperature">23°C</h1>
+                  <!-- dynamic access element -->
+                  <h1 id="temperature" class="temperature">23°C</h1> 
             
                 </div>
                 
-                <h3 class="weather-condition">Rain</h3>
+                <h3 id="weather-condition" class="weather-condition">Rain</h3>
 
                 <div class="divider"></div>
 
@@ -67,8 +69,8 @@
                   <span>Wind</span>
 
               </div>
-
-                  <h3>2 km/h</h3>
+  <!-- dynamic access element -->
+                  <h3 id="wind-speed">2 km/h</h3>
 
               </div>
 
@@ -84,8 +86,8 @@
                   <span>Humidity</span>
 
               </div>
-
-                  <h3>100%</h3>
+  <!-- dynamic access element -->
+                  <h3 id="humidity">100%</h3>
 
             </div>
            
@@ -104,8 +106,8 @@
                   <span>Visibility</span>
 
               </div>
-
-                  <h3>10 km</h3>
+  <!-- dynamic access element -->
+                  <h3 id="visibility">10 km</h3>
 
               </div>
 
