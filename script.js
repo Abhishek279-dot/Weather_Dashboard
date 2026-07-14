@@ -33,10 +33,28 @@ toggleBtn.addEventListener("click", () => {
     lucide.createIcons();
 });
 
+//  search button functionality  
+
+const searchIconBox = document.getElementById('search-icon-box');
+const cityInput = document.getElementById('city-input');
+
+searchIconBox.addEventListener('click', () => {
+  cityInput.classList.toggle('show');
+  if(cityInput.classList.contains('show')){
+    cityInput.focus();
+  }
+});
+
+cityInput.addEventListener('keydown', (e) => {
+  if(e.key === 'Enter'){
+    const cityName = cityInput.value.trim();
+    if(cityName){
+      console.log('Searching for:', cityName); //  fetch/logic put here
+    }
+    cityInput.value = '';
+    cityInput.classList.remove('show');
+  }
+});
 
 
-let search = document.querySelector("#search-box")
 
-search.addEventListener("click", function () {
-    search.classList.toggle("active");
-})

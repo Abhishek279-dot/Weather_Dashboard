@@ -37,7 +37,47 @@ body{
 
 /* search city feature */
 
-.searchBox i.
+.search-wrapper{
+    position:relative;
+}
+
+.search-icon-box{
+    width:28px;
+    height:28px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#EEF3FB;
+    border-radius:12px;
+    box-shadow:6px 6px 12px #c9d4e8, -6px -6px 12px #ffffff;
+    cursor:pointer;
+}
+
+.search-icon-box svg{
+    width:19px;
+    height:19px;
+    color:#ff6a00;
+}
+
+.city-input{
+    display:none;
+    position:absolute;
+    top:36px;
+    left:0;
+    width:150px;
+    padding:6px 10px;
+    border-radius:10px;
+    background:#EEF3FB;
+    box-shadow:6px 6px 12px #c9d4e8, -6px -6px 12px #ffffff;
+    font-size:13px;
+    z-index:2;
+    outline:none;
+}
+
+.city-input.show{
+    display:block;
+}
+
 
 /* icons styling */
 
@@ -52,22 +92,15 @@ body{
     color:#ff6a00;
      width:28px;
     height:28px;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     background:#EEF3FB;
     border-radius:12px;
-
-    box-shadow:
-    6px 6px 12px #c9d4e8,
-    -6px -6px 12px #ffffff;
-
+    box-shadow: 6px 6px 12px #c9d4e8, -6px -6px 12px #ffffff;
     position:relative;
     left:8px;
     top:8px;
-
     cursor:pointer;
 }
 .upicon{
@@ -376,10 +409,20 @@ body,
     transform:translateY(-3px);
 }
 
-body.dark-mode #search-box{
+body.dark-mode #search-icon-box{
 
     background:#2A2D3E;
 
+    box-shadow:
+    5px 5px 10px rgba(0,0,0,.45),
+    -5px -5px 10px rgba(255,255,255,.04);
+
+}
+
+body.dark-mode #city-input{
+
+    background:#2A2D3E;
+    color:white;
     box-shadow:
     5px 5px 10px rgba(0,0,0,.45),
     -5px -5px 10px rgba(255,255,255,.04);
