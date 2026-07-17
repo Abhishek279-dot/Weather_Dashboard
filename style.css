@@ -70,8 +70,11 @@ body{
     background:#EEF3FB;
     box-shadow:6px 6px 12px #c9d4e8, -6px -6px 12px #ffffff;
     font-size:13px;
-    z-index:2;
+    /* z-index:12; */
+    border:none;
     outline:none;
+    
+   
 }
 
 .city-input.show{

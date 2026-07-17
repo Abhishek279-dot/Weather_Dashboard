@@ -45,15 +45,33 @@ searchIconBox.addEventListener('click', () => {
   }
 });
 
-cityInput.addEventListener('keydown', (e) => {
+cityInput.addEventListener('keydown', async (e) => {
+  let cn = document.querySelector("#city");
   if(e.key === 'Enter'){
     const cityName = cityInput.value.trim();
-    if(cityName){
-      console.log('Searching for:', cityName); //  fetch/logic put here
+
+
+    if(cityName === ""){
+      alert("please enter any city name")
     }
+    cn.innerHTML = `${cityName}`;
+    if(cityName){
+
+      const apiKey = "23814881fd5ca7424c1c9d94f4f024c6"
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric` 
+
+    
+        const response = await fetch(url);
+        const data = await response.json()
+        console.log(data)
+        console.log(data['visibility']);
+      
+    }
+
+
     cityInput.value = '';
     cityInput.classList.remove('show');
-  }
+  }      
 });
 
 
