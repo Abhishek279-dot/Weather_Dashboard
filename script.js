@@ -64,7 +64,30 @@ cityInput.addEventListener('keydown', async (e) => {
         const response = await fetch(url);
         const data = await response.json()
         console.log(data)
-        console.log(data['visibility']);
+
+        // temprature updation
+        let temp = document.querySelector(".temperature");
+        const temperature = data.main.temp;
+        console.log(temperature); // Output: 24.67
+        temp.innerHTML = temperature;
+
+        //Wind updation
+        let w = document.querySelector("#wind-speed")
+        const wind = data.wind.speed;
+        w.innerHTML = wind + " km/h";
+
+        //humidity updation
+        let h = document.querySelector("#humidity")
+        const humidity = data.main.humidity;
+        h.innerHTML = humidity + "%";
+
+        //visibility updation
+        let v = document.querySelector("#visibility")
+        const visibility = data.visibility;
+        console.log(visibility)
+        v.innerHTML = visibility + " km";
+
+
       
     }
 
